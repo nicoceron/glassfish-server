@@ -17,6 +17,13 @@ This repository already contains:
 
 **Note:** The database connection details (service name, username, password alias) are hardcoded in the `7.0.23/Dockerfile`. If you need to connect to a _different_ database, you will need to modify the `wallet/` files and the `Dockerfile` accordingly (see original `README.md` in git history or comments in the Dockerfile for details).
 
+## Related Repositories
+
+This GlassFish server setup is designed to host the backend for the Nimble Task Management system.
+
+- **Backend (Source of the .war file):** [nicoceron/nimble-backend](https://github.com/nicoceron/nimble-backend)
+- **Android Client (Consumes the backend):** [nicoceron/nimble-android](https://github.com/nicoceron/nimble-android)
+
 ## Quick Start
 
 1.  **Clone the Repository:**
@@ -43,6 +50,13 @@ This repository already contains:
       --name my-glassfish-app \
       glassfish-oracle-app:latest
     ```
+
+- **Explanation of `-v "$(pwd)/target":/staging`:**
+  - `-v` mounts a volume, linking a host directory to a container directory.
+  - `$(pwd)` is replaced by the shell with the **full path to your current working directory** (where you run the `docker run` command, which should be the repository root).
+  - So, `"$(pwd)/target"` becomes the full path to the `target` directory _on your machine_.
+  - This host `target` directory is linked to the `/staging` directory _inside_ the container.
+  - Using `$(pwd)` makes the command portable, as it works correctly no matter where you cloned the repository.
 
 ## Accessing the Application
 
