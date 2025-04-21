@@ -23,7 +23,7 @@ This repository already contains:
 
     ```bash
     git clone https://github.com/nicoceron/glassfish-server.git
-    cd <repository-directory>
+    cd glassfish-server
     ```
 
 2.  **Build the Docker Image:**
@@ -46,7 +46,7 @@ This repository already contains:
 
 ## Accessing the Application
 
-- **Web Application:** Access your application via `http://localhost:8080/<your-app-context-root>/`. The context root is usually the name of your `.war` file without the extension (e.g., `http://localhost:8080/myapp/`).
+- **Web Application:** Access your application via `http://localhost:8080/nimblev5-1.0-SNAPSHOT/`. (Context root derived from `target/nimblev5-1.0-SNAPSHOT.war`).
 - **GlassFish Admin Console:** Accessible at `https://localhost:4848`. Default login: `admin`/`admin`.
 
 ## Managing the Container
