@@ -5,7 +5,6 @@ This repository provides a ready-to-run Docker setup for GlassFish 7. It's pre-c
 ## Prerequisites
 
 - Docker installed and running.
-- Your web application packaged as a `.war` file.
 
 ## Included Configuration
 
@@ -23,7 +22,7 @@ This repository already contains:
 1.  **Clone the Repository:**
 
     ```bash
-    git clone <your-repository-url>
+    git clone https://github.com/nicoceron/glassfish-server.git
     cd <repository-directory>
     ```
 
